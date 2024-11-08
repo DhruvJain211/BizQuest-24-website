@@ -296,7 +296,8 @@ section {
 }
 
 .col-38 {
-    width: 38.2%;
+    
+    width: 80%;
 }
 
 /* --------- 2.1 Header --------- */
@@ -863,9 +864,9 @@ h6 {
     display: block;
 }
 
-.icon-top .icon-block-description {
+/* .icon-top .icon-block-description {
     padding-top: 25px;
-}
+} */
 
 /* --------- 5.2 Parallax Elements ---------- */
 
