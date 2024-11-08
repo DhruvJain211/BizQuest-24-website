@@ -760,6 +760,7 @@ h6 {
 
 .section-heading {
     padding: 0 0 15px 0;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -936,8 +937,13 @@ blockquote {
 }
 
 .testimonial img {
-    max-height: 120px;
-    border-radius: 250em;
+    width: 120px;  /* Set fixed width */
+    height: 120px; /* Set fixed height equal to width to create perfect circle */
+    border-radius: 50%; /* 50% creates a perfect circle */
+    object-fit: cover; /* Makes image cover the container without distortion */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Ensures consistent margin behavior */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 .testimonial footer {
@@ -947,7 +953,7 @@ blockquote {
 /* Style Classic - Avatar above Testimonial */
 
 .testimonial.classic img {
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 25px;
 }
 
@@ -1397,8 +1403,7 @@ blockquote {
 .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top;
-    0;
+    top:0;
     right: 0;
     bottom: 0;
     left: 0;
