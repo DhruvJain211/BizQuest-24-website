@@ -379,16 +379,101 @@ section {
 
 /*Style*/
 
-.button {
-    font-size: 16px;
-    margin: 35px 0;
-    padding: 11px 16px;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    transition: all .3s linear;
-    display: inline-block;
-    border-width: 3px;
-    border-style: solid;
+.btn-41,
+.btn-41 *,
+.btn-41 :after,
+.btn-41 :before,
+.btn-41:after,
+.btn-41:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-41 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: transparent; /* Changed to transparent */
+  background-image: none;
+  color: #2c1810; /* Changed to dark brown */
+  cursor: pointer;
+  font-family: 'Times New Roman', serif; /* Changed to a classic font */
+  font-size: 16px;
+  letter-spacing: 2px; /* Added letter spacing */
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-41:disabled {
+  cursor: default;
+}
+
+.btn-41:-moz-focusring {
+  outline: auto;
+}
+
+.btn-41 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-41 [hidden] {
+  display: none;
+}
+
+.btn-41 {
+  border: 2px solid #2c1810; /* Changed to dark brown */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-sizing: border-box;
+  display: block;
+  font-weight: 600; /* Slightly reduced weight */
+  overflow: hidden;
+  padding: 1rem 2.5rem; /* Slightly adjusted padding */
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Added smooth transition */
+  backdrop-filter: blur(5px); /* Added blur effect */
+  background: rgba(245, 245, 220, 0.1); /* Very subtle beige background */
+}
+
+.btn-41 span {
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-41:before {
+  background: #eee2b5; /* Changed to dark brown */
+  border-radius: 5px;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: transform 0.3s ease-out;
+  transform: scale(0);
+}
+
+.btn-41:hover {
+  color: #F5F5DC; /* Text color changes to beige on hover */
+}
+
+.btn-41:hover:before {
+  transform: scale(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-41 {
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-41 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Play Button */
@@ -951,14 +1036,25 @@ blockquote {
 }
 
 /* Style Classic - Avatar above Testimonial */
-
+.testimonial.classic {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    margin: 0px;
+}
 .testimonial.classic img {
     /* display: inline-block; */
     margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .testimonial.classic q {
     display: block;
+    
 }
 
 .testimonial.classic footer:before {
@@ -2336,3 +2432,4 @@ blockquote {
 
 
 
+/* TVC CSS */
