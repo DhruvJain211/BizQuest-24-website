@@ -760,7 +760,7 @@ h6 {
 
 .section-heading {
     padding: 0 0 15px 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .section-subtitle {
@@ -953,7 +953,7 @@ blockquote {
 /* Style Classic - Avatar above Testimonial */
 
 .testimonial.classic img {
-    /* display: inline-block; */
+    display: inline-block;
     margin-bottom: 25px;
 }
 
