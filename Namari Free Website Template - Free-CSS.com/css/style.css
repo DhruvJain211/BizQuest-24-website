@@ -30,6 +30,19 @@
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
+#tvc{
+    background: url(../images/banner-images/Bg\ for\ about\ tvc.png) no-repeat center center;
+    background-size: cover; /* Default for all screens */
+}
+
+/* Media query for laptop screens (e.g., widths between 1024px and 1440px) */
+@media (min-width: 900px) and (max-width: 1440px) {
+    #tvc{
+        background-size: 100% 100%; /* Stretch to fit on laptop screens */
+    }
+}
+
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
