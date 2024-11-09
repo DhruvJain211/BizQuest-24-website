@@ -720,7 +720,7 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 #banner {
-    background: url("../images/banner-images/Building\ bG1.png") no-repeat center top;
+    background: url("../images/banner-images/Building\ bG1.webp") no-repeat center top;
     background-size:cover;
     
 }
@@ -931,3 +931,8 @@ h6 {
 #landing-footer i {
     color:#999;
 }
+
+
+
+/* =========================================================== */
+

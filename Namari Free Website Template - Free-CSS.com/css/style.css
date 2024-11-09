@@ -30,6 +30,44 @@
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
+#tvc{
+    background: url(../images/banner-images/Bg\ for\ about\ tvc.png) no-repeat center center;
+    background-size: cover; /* Default for all screens */
+}
+
+/* Media query for laptop screens (e.g., widths between 1024px and 1440px) */
+@media (min-width: 900px) and (max-width: 1440px) {
+    #tvc{
+        background-size: 100% 100%; /* Stretch to fit on laptop screens */
+    }
+}
+
+/* ================================================================================================ */
+
+#tiet{
+    background-color: rgb(0, 204, 255);
+                padding: 5%;margin: 0% 10% 0% 10%;
+                background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 20px;
+border: 5px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media (max-width: 500px) {
+    #tiet{
+        margin: 0px;
+        padding: 2%;
+    }
+}
+
+
+
+
+/* ================================================================================== */
+
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
