@@ -29,9 +29,11 @@
 /*------------------------------------------------------------------------------------------*/
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
+/* fonts added */
+ @import url('https://fonts.cdnfonts.com/css/roman-sd');
 
 #tvc{
-    background: url(../images/banner-images/Bg\ for\ about\ tvc.png) no-repeat center center;
+    background: url(../images/banner-images/Bg\ for\ about\ tvc.webp) no-repeat center center;
     background-size: cover; /* Default for all screens */
 }
 
@@ -435,101 +437,96 @@ section {
 
 /*Style*/
 
-.btn-41,
-.btn-41 *,
-.btn-41 :after,
-.btn-41 :before,
-.btn-41:after,
-.btn-41:before {
-  border: 0 solid;
-  box-sizing: border-box;
+.btn-41, .btn-41 *, .btn-41 :after, .btn-41 :before, .btn-41:after, .btn-41:before {
+    border: 0 solid;
+    box-sizing: border-box;
 }
 
 .btn-41 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background-color: transparent; /* Changed to transparent */
-  background-image: none;
-  color: #2c1810; /* Changed to dark brown */
-  cursor: pointer;
-  font-family: 'Times New Roman', serif; /* Changed to a classic font */
-  font-size: 16px;
-  letter-spacing: 2px; /* Added letter spacing */
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    color: #4a3427; /* Darker brown for better visibility */
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
 }
 
 .btn-41:disabled {
-  cursor: default;
+    cursor: default;
 }
 
 .btn-41:-moz-focusring {
-  outline: auto;
+    outline: auto;
 }
 
 .btn-41 svg {
-  display: block;
-  vertical-align: middle;
+    display: block;
+    vertical-align: middle;
 }
 
 .btn-41 [hidden] {
-  display: none;
+    display: none;
 }
 
 .btn-41 {
-  border: 2px solid #2c1810; /* Changed to dark brown */
-  border-radius: 10px; /* Slightly rounded corners */
-  box-sizing: border-box;
-  display: block;
-  font-weight: 600; /* Slightly reduced weight */
-  overflow: hidden;
-  padding: 1rem 2.5rem; /* Slightly adjusted padding */
-  position: relative;
-  text-transform: uppercase;
-  transition: all 0.3s ease; /* Added smooth transition */
-  backdrop-filter: blur(5px); /* Added blur effect */
-  background: rgba(245, 245, 220, 0.1); /* Very subtle beige background */
+    border: 2px solid #4a3427; /* Darker brown border */
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 600;
+    overflow: hidden;
+    padding: 1rem 2.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    background: #ffffff; /* Pure white background for more contrast */
 }
 
 .btn-41 span {
-  mix-blend-mode: difference;
-  position: relative;
-  z-index: 1;
+    mix-blend-mode: normal; /* Changed from difference for better visibility */
+    position: relative;
+    z-index: 1;
 }
 
 .btn-41:before {
-  background: #eee2b5; /* Changed to dark brown */
-  border-radius: 5px;
-  content: "";
-  inset: 0;
-  position: absolute;
-  transition: transform 0.3s ease-out;
-  transform: scale(0);
+    background: #8b6b4a; /* Warmer brown for hover effect */
+    border-radius: 5px;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: transform 0.3s ease-out;
+    transform: scale(0);
 }
 
 .btn-41:hover {
-  color: #F5F5DC; /* Text color changes to beige on hover */
+    color: #ffffff; /* White text on hover for maximum contrast */
 }
 
 .btn-41:hover:before {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .btn-41 {
-    padding: 0.8rem 2rem;
-    font-size: 14px;
-  }
+    .btn-41 {
+        padding: 0.8rem 2rem;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
-  .btn-41 {
-    width: 100%;
-    text-align: center;
-  }
+    .btn-41 {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Play Button */
@@ -2607,3 +2604,12 @@ blockquote {
     50% { transform: translate(-5%, 10%) scale(0.9); }
     75% { transform: translate(10%, -5%) scale(1.05); }
 }
+
+
+/* add font by TVC */
+
+/* @import url('https://fonts.cdnfonts.com/css/roman-sd');
+
+.section-title {
+    font-family: 'Roman SD', sans-serif;
+} */

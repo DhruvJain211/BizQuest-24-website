@@ -730,11 +730,12 @@ a:hover, #header.nav-solid nav a:hover {
 /* 5. Typography */
 /*------------------------------------------------------------------------------------------*/
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap');
 body {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: "Cormorant Unicase", serif;
+    font-style: normal;
     font-size:15px;
-    font-weight:normal;
+    font-weight:400;
     color:#111;
 }
 
@@ -776,16 +777,16 @@ body {
 
 
 /* Section Title and Subtitle */
-
+@import url('https://fonts.cdnfonts.com/css/roman-sd');
 .section-title {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: 'Roman SD', sans-serif;
     font-size: 34px; 
     font-weight:700;
     color:#111;
 }
 
 .section-subtitle {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: "Cormorant Unicase", serif;
     font-size: 16px;
     font-weight:bold;
     color:#4a4848;
@@ -806,6 +807,7 @@ body {
 
 /* Standard Headings h1-h6 */
 
+
 h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 40px; 
@@ -821,14 +823,15 @@ h2 {
 }
 
 h3 {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: 'map-roman-normal', serif;
     font-size: 30px; 
     font-weight:700;
     color:#111;
 }
 
 h4 {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: 'map-roman-normal', serif;
+    font-style: normal;
     font-size: 18px; 
     font-weight:400;
     color:#111;
