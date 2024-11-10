@@ -44,9 +44,9 @@ body {
     /* border-color: rgba(0,0,0,.3);
     border-width: 2px;
     border-style: solid; */
-    background-color: beige;
-    background:beige;
-    background: beige;
+    background-color: #fffcf0;
+    background:#fffcf0;
+    background: #fffcf0;
     z-index: -4;
 }
 
@@ -603,7 +603,7 @@ body {
 
 
 body {
-    background:beige;
+    background:#fffcf0;
 }
 
 
