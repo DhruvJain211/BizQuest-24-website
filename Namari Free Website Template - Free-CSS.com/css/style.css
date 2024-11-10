@@ -74,6 +74,24 @@ border: 5px solid rgba( 255, 255, 255, 0.18 );
     box-sizing: border-box;
 }
 
+:root {
+    --primary: rgb(238, 226, 181);
+    --secondary: rgb(212, 163, 115);
+    --accent1: rgb(204, 213, 174);
+    --accent2: rgb(233, 237, 201);
+    --text: rgb(51, 51, 51);
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    
+    --radius-lg: 1rem;
+    --transition: 0.3s ease-in-out;
+  }
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td {
     margin: 0;
     padding: 0;
@@ -2466,6 +2484,62 @@ blockquote {
 
 }
 
+/* TVC codes */
 
+.bizquest-section {
+  padding: var(--space-xl) 0;
+}
 
+.info-section {
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 6px var(--shadow);
+}
 
+.info-section.bottom {
+  margin-top: var(--space-xl);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+  justify-content: center;
+}
+
+@media (min-width: 1100px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bizquest-card {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: transform var(--transition);
+}
+
+.bizquest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
