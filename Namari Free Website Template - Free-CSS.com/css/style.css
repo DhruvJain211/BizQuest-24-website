@@ -2486,60 +2486,124 @@ blockquote {
 
 /* TVC codes */
 
-.bizquest-section {
-  padding: var(--space-xl) 0;
+
+.single-page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.page-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: var(--primary);
+}
+
+.page-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary),
+        var(--accent1),
+        var(--accent2)
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+.page-blob {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        var(--secondary) 0%,
+        transparent 70%
+    );
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+    animation: blobFloat 20s ease-in-out infinite;
+}
+
+.page-blob:nth-child(1) { top: 0; left: 0; width: 50%; height: 50%; }
+.page-blob:nth-child(2) { top: 50%; right: 0; width: 60%; height: 60%; animation-delay: -5s; }
+.page-blob:nth-child(3) { bottom: 0; left: 30%; width: 40%; height: 40%; animation-delay: -10s; }
+
+.page-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-xl) 0;
 }
 
 .info-section {
-  max-width: 800px;
-  margin: 0 auto var(--space-xl);
-  padding: var(--space-lg);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 6px var(--shadow);
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 .info-section.bottom {
-  margin-top: var(--space-xl);
+    margin-top: var(--space-xl);
 }
 
 .card-grid {
-  display: grid;
-  gap: var(--space-xl);
-  align-items: start;
-  justify-content: center;
-}
-
-@media (min-width: 1100px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1099px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+    display: grid;
+    gap: var(--space-xl);
+    align-items: start;
+    justify-content: center;
 }
 
 .bizquest-card {
-  position: relative;
-  padding: var(--space-xl);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px var(--shadow);
-  transition: transform var(--transition);
+    position: relative;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: transform var(--transition);
 }
 
 .bizquest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px var(--shadow);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+@media (min-width: 1100px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-blob {
+        display: none;
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(5%, 5%) scale(1.1); }
+    50% { transform: translate(-5%, 10%) scale(0.9); }
+    75% { transform: translate(10%, -5%) scale(1.05); }
 }
