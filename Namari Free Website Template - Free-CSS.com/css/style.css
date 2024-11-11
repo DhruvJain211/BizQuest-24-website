@@ -79,7 +79,7 @@ border: 5px solid rgba( 255, 255, 255, 0.18 );
 :root {
     --primary: rgb(238, 226, 181);
     --secondary: rgb(212, 163, 115);
-    --accent1: rgb(204, 213, 174);
+    --accent1: rgb(245, 245, 220);
     --accent2: rgb(233, 237, 201);
     --text: rgb(51, 51, 51);
     --shadow: rgba(0, 0, 0, 0.1);
@@ -813,6 +813,11 @@ nav#nav-mobile a:hover {
     width: 32px;
     text-align: center;
 }
+#header .social-icons a {
+    
+    width: 70px;
+    text-align: center;
+}
 
 .social-icons a:hover {
     opacity: 0.7;
@@ -922,7 +927,7 @@ h6 {
 }
 
 #banner-content.row {
-    padding-top: 170px;
+    padding-top: 120px;
     padding-bottom: 100px;
 }
 
@@ -2249,14 +2254,18 @@ blockquote {
         display: block;
     }
 
-    #header aside {
+    /* #header aside {
         display: none;
-    }
+    } */
 }
 
 /* Landscape mobile & down
 ===============================*/
+
+
 @media (max-width: 480px) {
+
+    
 
     #wrapper {
         margin:0;
@@ -2282,7 +2291,7 @@ blockquote {
 
     /*-----------------Header Elements-----------------*/
     #header .row {
-        padding: 0 15px !important;
+        padding: 0 4px !important;
     }
 
     #header.nav-solid [class*="col-"] {
@@ -2298,6 +2307,8 @@ blockquote {
     #header aside {
         clear: both;
         padding: 0;
+        margin-top: -35px;
+        margin-right: 30px;
     }
 
     #header ul.social-icons {
@@ -2554,10 +2565,13 @@ blockquote {
     gap: var(--space-xl);
     align-items: start;
     justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .bizquest-card {
     position: relative;
+    height: 100%;
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
     background: rgba(255, 255, 255, 0.1);
