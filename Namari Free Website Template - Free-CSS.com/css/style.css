@@ -29,12 +29,70 @@
 /*------------------------------------------------------------------------------------------*/
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
+/* fonts added */
+ @import url('https://fonts.cdnfonts.com/css/roman-sd');
+
+#tvc{
+    background: url(../images/banner-images/Bg\ for\ about\ tvc.webp) no-repeat center center;
+    background-size: cover; /* Default for all screens */
+}
+
+/* Media query for laptop screens (e.g., widths between 1024px and 1440px) */
+@media (min-width: 900px) and (max-width: 1440px) {
+    #tvc{
+        background-size: 100% 100%; /* Stretch to fit on laptop screens */
+    }
+}
+
+/* ================================================================================================ */
+
+#tiet{
+    background-color: rgb(0, 204, 255);
+                padding: 5%;margin: 0% 10% 0% 10%;
+                background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 20px;
+border: 5px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media (max-width: 500px) {
+    #tiet{
+        margin: 0px;
+        padding: 2%;
+    }
+}
+
+
+
+
+/* ================================================================================== */
+
 
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+:root {
+    --primary: rgb(238, 226, 181);
+    --secondary: rgb(212, 163, 115);
+    --accent1: rgb(245, 245, 220);
+    --accent2: rgb(233, 237, 201);
+    --text: rgb(51, 51, 51);
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    
+    --radius-lg: 1rem;
+    --transition: 0.3s ease-in-out;
+  }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td {
     margin: 0;
@@ -379,16 +437,96 @@ section {
 
 /*Style*/
 
-.button {
+.btn-41, .btn-41 *, .btn-41 :after, .btn-41 :before, .btn-41:after, .btn-41:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-41 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    color: #4a3427; /* Darker brown for better visibility */
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
     font-size: 16px;
-    margin: 35px 0;
-    padding: 11px 16px;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    transition: all .3s linear;
-    display: inline-block;
-    border-width: 3px;
-    border-style: solid;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-41:disabled {
+    cursor: default;
+}
+
+.btn-41:-moz-focusring {
+    outline: auto;
+}
+
+.btn-41 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-41 [hidden] {
+    display: none;
+}
+
+.btn-41 {
+    border: 2px solid #4a3427; /* Darker brown border */
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 600;
+    overflow: hidden;
+    padding: 1rem 2.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    background: #ffffff; /* Pure white background for more contrast */
+}
+
+.btn-41 span {
+    mix-blend-mode: normal; /* Changed from difference for better visibility */
+    position: relative;
+    z-index: 1;
+}
+
+.btn-41:before {
+    background: #8b6b4a; /* Warmer brown for hover effect */
+    border-radius: 5px;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: transform 0.3s ease-out;
+    transform: scale(0);
+}
+
+.btn-41:hover {
+    color: #ffffff; /* White text on hover for maximum contrast */
+}
+
+.btn-41:hover:before {
+    transform: scale(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-41 {
+        padding: 0.8rem 2rem;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-41 {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Play Button */
@@ -675,6 +813,11 @@ nav#nav-mobile a:hover {
     width: 32px;
     text-align: center;
 }
+#header .social-icons a {
+    
+    width: 70px;
+    text-align: center;
+}
 
 .social-icons a:hover {
     opacity: 0.7;
@@ -760,7 +903,6 @@ h6 {
 
 .section-heading {
     padding: 0 0 15px 0;
-    /* text-align: center; */
 }
 
 .section-subtitle {
@@ -785,7 +927,7 @@ h6 {
 }
 
 #banner-content.row {
-    padding-top: 170px;
+    padding-top: 120px;
     padding-bottom: 100px;
 }
 
@@ -952,9 +1094,20 @@ blockquote {
 
 /* Style Classic - Avatar above Testimonial */
 
+.testimonial.classic {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    margin: 0px;
+}
 .testimonial.classic img {
     display: inline-block;
     margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .testimonial.classic q {
@@ -2101,14 +2254,18 @@ blockquote {
         display: block;
     }
 
-    #header aside {
+    /* #header aside {
         display: none;
-    }
+    } */
 }
 
 /* Landscape mobile & down
 ===============================*/
+
+
 @media (max-width: 480px) {
+
+    
 
     #wrapper {
         margin:0;
@@ -2134,7 +2291,7 @@ blockquote {
 
     /*-----------------Header Elements-----------------*/
     #header .row {
-        padding: 0 15px !important;
+        padding: 0 4px !important;
     }
 
     #header.nav-solid [class*="col-"] {
@@ -2150,6 +2307,8 @@ blockquote {
     #header aside {
         clear: both;
         padding: 0;
+        margin-top: -35px;
+        margin-right: 30px;
     }
 
     #header ul.social-icons {
@@ -2333,6 +2492,138 @@ blockquote {
 
 }
 
+/* TVC codes */
 
 
+.single-page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+}
 
+.page-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: var(--primary);
+}
+
+.page-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary),
+        var(--accent1),
+        var(--accent2)
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+.page-blob {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        var(--secondary) 0%,
+        transparent 70%
+    );
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+    animation: blobFloat 20s ease-in-out infinite;
+}
+
+.page-blob:nth-child(1) { top: 0; left: 0; width: 50%; height: 50%; }
+.page-blob:nth-child(2) { top: 50%; right: 0; width: 60%; height: 60%; animation-delay: -5s; }
+.page-blob:nth-child(3) { bottom: 0; left: 30%; width: 40%; height: 40%; animation-delay: -10s; }
+
+.page-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-xl) 0;
+}
+
+.info-section {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.info-section.bottom {
+    margin-top: var(--space-xl);
+}
+
+.card-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: start;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bizquest-card {
+    position: relative;
+    height: 100%;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: transform var(--transition);
+}
+
+.bizquest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+@media (min-width: 1100px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-blob {
+        display: none;
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(5%, 5%) scale(1.1); }
+    50% { transform: translate(-5%, 10%) scale(0.9); }
+    75% { transform: translate(10%, -5%) scale(1.05); }
+}
+
+
+/* add font by TVC */
+
+/* @import url('https://fonts.cdnfonts.com/css/roman-sd');
+
+.section-title {
+    font-family: 'Roman SD', sans-serif;
+} */
