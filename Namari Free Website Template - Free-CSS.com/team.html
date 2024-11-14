@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our talented team of web developers and designers">
+    <title>Our Team | Web Development Professionals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #bc3fbf;
+            --border-color: #d6d675;
+            --text-color: #333;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background: url(Building\ bG1.webp) no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .our-team {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-speed);
+            border-left: 8px solid var(--border-color);
+            border-bottom: 8px solid var(--border-color);
+        }
+
+        .our-team:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-image {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-speed);
+        }
+
+        .our-team:hover .team-image img {
+            transform: scale(1.05);
+        }
+
+        .description {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .our-team:hover .description {
+            opacity: 1;
+        }
+
+        .social {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(-100%);
+            background: var(--border-color);
+            padding: 0.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: transform var(--transition-speed);
+            list-style: none;
+        }
+
+        .our-team:hover .social {
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .social li {
+            margin: 0.5rem 0;
+        }
+
+        .social a {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            display: block;
+            transition: color var(--transition-speed);
+        }
+
+        .social a:hover {
+            color: var(--primary-color);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            letter-spacing: 2px;
+            transition: color var(--transition-speed);
+        }
+
+        .post {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 1rem auto;
+            }
+            
+            .social {
+                display: flex;
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(100%);
+                border-radius: 8px 8px 0 0;
+                padding: 0.5rem 1rem;
+            }
+
+            .our-team:hover .social {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            .social li {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Meet Our Team</h1>
+        <div class="row">
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="IMG_2630.jpg" alt="Jashan Khandelwal">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/jashan-khandelwal-3661a31b6/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/itsjashan.kdwl/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/Jashan-Khandelwal" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Jashan Khandelwal</h2>
+                    <span class="post">Web Developer</span>
+                </div>
+            </div>
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="WhatsApp Image 2024-11-13 at 23.45.26_4fe50475.jpg" alt="Krish">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/krish-arora-422055296" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/krish_arora_10" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/K-Arora-10" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Krish Arora</h2>
+                    <span class="post">Web Developer</span>
+                </div>
+            </div>
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="WhatsApp Image 2024-11-13 at 23.42.05_f18eb51e.jpg" alt="Parth">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/parth-jain-69393165?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/parth.jain49/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/Parthjain2005" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Parth Jain</h2>
+                    <span class="post">Web Developer</span>
+                </div>
+            </div>
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="WhatsApp Image 2024-11-13 at 11.54.30_e8d6b92b.jpg" alt="Surya">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/suryapartapsingh" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/partapsurya_" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/partapsurya" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Surya Pratap Singh</h2>
+                    <span class="post">Web Developer</span>
+                </div>
+            </div>
+            
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="DSC_0923_1.JPG" alt="Anoushka">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/anoushka-awasthi-a87754247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/anoushka.awasthi/profilecard/?igsh=MTI1OTFoaW1xMHB0aQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/anoushkawasthi" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Anoushka Awasthi</h2>
+                    <span class="post">Web Developer</span>
+                </div>
+            </div>
+            <div class="our-team">
+                <div class="team-image">
+                    <img src="WhatsApp Image 2024-11-13 at 23.48.49_df1ecaf3.jpg" alt="Dhruv">
+                    <p class="description">
+                        Full-stack developer specializing in modern web technologies
+                    </p>
+                    <ul class="social" aria-label="Social media links">
+                        <li><a href="https://www.linkedin.com/in/dhruv-jain-6bab97252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/DhruvJain211" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="team-info">
+                    <h2 class="title">Dhruv Jain</h2>
+                    <span class="post">Technical secretary</span>
+                </div>
+            </div>
+           
+            <!-- Repeat similar structure for other team members -->
+        </div>
+    </div>
+</body>
+</html>
