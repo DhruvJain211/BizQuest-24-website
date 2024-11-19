@@ -2619,6 +2619,14 @@ blockquote {
     75% { transform: translate(10%, -5%) scale(1.05); }
 }
 
+#sponsors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
 
 /* add font by TVC */
 
